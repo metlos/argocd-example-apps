@@ -4,4 +4,10 @@ metadata:
   generateName: schema-migrate-
   annotations:
     argocd.argoproj.io/hook: PreSync
-
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: asdf
+          image: curlimages/curl
